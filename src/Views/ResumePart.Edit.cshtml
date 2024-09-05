@@ -1,0 +1,8 @@
+@model ResumePartViewModel
+
+<fieldset class="form-group" asp-validation-class-for="Name">
+    <label class="form-label" asp-for="Name">@T["Name"] <span asp-validation-for="Name"></span></label>
+    <input asp-for="Name" class="form-control" />
+    <span class="hint">@T["Resume page name"]</span>
+</fieldset>
+

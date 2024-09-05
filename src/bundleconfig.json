@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "wwwroot/styles/resume.min.css",
+    "inputFiles": [
+      "wwwroot/styles/resume.css"
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+﻿@model ResumeListPartViewModel
+
+@inject OrchardCore.ContentManagement.Display.IContentItemDisplayManager ContentItemDisplayManager
+
+<style asp-name="OrchardCore.Modules.Resume"></style>
+
+<div class="resume-header">
+</div>
+
+@if (Model.Experiences.Any())
+{
+	<section id="experiences-section" class="experiences-section section">
+		<h2 class="section-title">@T["ProfessionalExperiences"]</h2>
+		<div class="resume-timeline">
+
+			@foreach (var contentItem in Model.Experiences)
+			{
+				var contentItemSummary = await ContentItemDisplayManager.BuildDisplayAsync(contentItem, Model.Context.Updater, "Summary", Model.Context.GroupId);
+				@await DisplayAsync(contentItemSummary)
+			}
+
+		</div>
+	</section>
+}
+
+@if (Model.Educations.Any())
+{
+	<section id="education-section" class="education-section section">
+		<h2 class="section-title">@T["Education"]</h2>
+		<div class="container">
+			<div class="row row-cols-1 row-cols-sm-1 row-cols-md-3">
+				@foreach (var contentItem in Model.Educations)
+				{
+					var contentItemSummary = await ContentItemDisplayManager.BuildDisplayAsync(contentItem, Model.Context.Updater, "Summary", Model.Context.GroupId);
+					<div class="col">
+						@await DisplayAsync(contentItemSummary)
+					</div>
+				}
+			</div>
+		</div>
+	</section>
+}
+
+@if (Model.Awards.Any())
+{
+	<section id="certifications-section" class="section">
+		<h2 class="section-title">Certifications</h2>
+		<div class="resume-timeline certification">
+			@foreach (var contentItem in Model.Awards)
+			{
+				var contentItemSummary = await ContentItemDisplayManager.BuildDisplayAsync(contentItem, Model.Context.Updater, "Summary", Model.Context.GroupId);
+				@await DisplayAsync(contentItemSummary)
+			}
+		</div>
+	</section>
+}

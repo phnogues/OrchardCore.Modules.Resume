@@ -1,0 +1,30 @@
+﻿@model ResumeEducationPartViewModel
+
+@{
+	var date = Model.StartDate is not null ? Model.StartDate.Value.ToString("MMM yyyy") : string.Empty;
+	if (Model.EndDate is not null)
+	{
+		date += " - " + Model.EndDate.Value.ToString("MMM yyyy");
+	}
+	else
+	{
+		date += " - " + T["Present"].Value;
+	}
+}
+
+<div class="col">
+	<div class="item-inner">
+		<h3 class="degree">@Model.Degree</h3>
+		<div class="education-body">
+			@Model.SchoolName - @Model.Location
+		</div>
+		<div class="time">@date</div>
+		@if (!string.IsNullOrEmpty(Model.Description))
+		{
+			<div class="desc">
+
+				@Html.Raw(((MarkupString)Regex.Replace(HttpUtility.HtmlEncode(Model.Description), "\r?\n|\r", "<br />")))
+			</div>
+		}
+	</div>
+</div>

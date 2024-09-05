@@ -1,0 +1,15 @@
+﻿#: Test value
+msgid "Test"
+msgstr "Test en"
+
+# Formations
+msgid "Education"
+msgstr "Education"
+
+# Expériences Professionnelles
+msgid "ProfessionalExperiences"
+msgstr "Professional experiences"
+
+# Today
+msgid "Present"
+msgstr "Present"

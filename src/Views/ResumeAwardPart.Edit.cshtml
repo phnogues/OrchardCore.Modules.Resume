@@ -1,0 +1,37 @@
+@model ResumeAwardPartViewModel
+
+<fieldset class="form-group" asp-validation-class-for="AwardTitle">
+	<label class="form-label" asp-for="AwardTitle">@T["Name"] <span asp-validation-for="AwardTitle"></span></label>
+	<input asp-for="AwardTitle" class="form-control" />
+	<span class="hint">@T["Award Title"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="AwardIdOrName">
+	<label class="form-label" asp-for="AwardIdOrName">@T["AwardIdOrName"] <span asp-validation-for="AwardIdOrName"></span></label>
+	<input asp-for="AwardIdOrName" class="form-control" />
+	<span class="hint">@T["Award Id or Award Name"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="StartDate">
+	<label class="form-label" asp-for="StartDate">@T["IssuedDate"] <span asp-validation-for="StartDate"></span></label>
+	<input asp-for="StartDate" type="date"  class="form-control" />
+	<span class="hint">@T["Award issued date"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="Location">
+	<label class="form-label" asp-for="Location">@T["Location"] <span asp-validation-for="Location"></span></label>
+	<input asp-for="Location" class="form-control" />
+	<span class="hint">@T["Award location"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="IssuingOrganization">
+	<label class="form-label" asp-for="IssuingOrganization">@T["IssuingOrganization"] <span asp-validation-for="IssuingOrganization"></span></label>
+	<input asp-for="IssuingOrganization" class="form-control" />
+	<span class="hint">@T["Organization location"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="Description">
+	<label class="form-label" asp-for="Description">@T["Description"] <span asp-validation-for="Description"></span></label>
+	<textarea asp-for="Description" class="form-control" rows="10"></textarea>
+	<span class="hint">@T["Description"]</span>
+</fieldset>

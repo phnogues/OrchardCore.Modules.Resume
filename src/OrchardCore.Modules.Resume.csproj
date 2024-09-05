@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+		<Title>Orchard Core to display resume</Title>
+		<PackageTags>Orchard Core, Orchard CMS, resume</PackageTags>
+		<DefaultItemExcludes>$(DefaultItemExcludes);.git*;node_modules\**</DefaultItemExcludes>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Version>0.1.0.0</Version>
+		<Authors>Pierre-Henri Nogues</Authors>
+		<Company>PierreHenri.fr</Company>
+		<Description>Orchard Core module to display your resume.</Description>
+		<PackageProjectUrl>https://www.pierrehenri.fr/en/modules-orchard</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/phnogues/OrchardCore.Modules.Resume</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>logo.png</PackageIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="node_modules\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="../logo.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="../README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<EmbeddedResource Remove="bundleconfig.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="bundleconfig.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BuildBundlerMinifier2022" Version="2.9.11" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+		<PackageReference Include="OrchardCore.Autoroute" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.Title" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.Users.Abstractions" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.Workflows.Abstractions" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.BackgroundTasks" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.ContentFields" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.ContentManagement" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.ContentTypes.Abstractions" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.Data.Abstractions" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.DynamicCache" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.FileStorage.FileSystem" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.Indexing.Abstractions" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.Media.Abstractions" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.Module.Targets" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.ResourceManagement" Version="1.8.4" />
+		<PackageReference Include="OrchardCore.DisplayManagement" Version="1.8.4" />
+	</ItemGroup>
+
+</Project>

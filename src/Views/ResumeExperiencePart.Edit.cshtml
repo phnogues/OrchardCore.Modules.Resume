@@ -1,0 +1,42 @@
+@model ResumeExperiencePartViewModel
+
+<fieldset class="form-group" asp-validation-class-for="CompanyName">
+    <label class="form-label" asp-for="CompanyName">@T["Name"] <span asp-validation-for="CompanyName"></span></label>
+    <input asp-for="CompanyName" class="form-control" />
+    <span class="hint">@T["Company Name"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="JobTitle">
+    <label class="form-label" asp-for="JobTitle">@T["JobTitle"] <span asp-validation-for="JobTitle"></span></label>
+    <input asp-for="JobTitle" class="form-control" />
+    <span class="hint">@T["Job title"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="StartDate">
+    <label class="form-label" type="date"  asp-for="StartDate">@T["StartDate"] <span asp-validation-for="StartDate"></span></label>
+    <input asp-for="StartDate" class="form-control" />
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="EndDate">
+    <label class="form-label" asp-for="EndDate">@T["EndDate"] <span asp-validation-for="EndDate"></span></label>
+    <input asp-for="EndDate" type="date" class="form-control" />
+    <span class="hint">@T["Leave empty if it's your current job"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="Description">
+    <label class="form-label" asp-for="Description">@T["Description"] <span asp-validation-for="Description"></span></label>
+    <textarea asp-for="Description" class="form-control" rows="10" ></textarea>
+    <span class="hint">@T["Description"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="Location">
+    <label class="form-label" asp-for="Location">@T["Location"] <span asp-validation-for="Location"></span></label>
+    <input asp-for="Location" class="form-control" />
+    <span class="hint">@T["Job Location"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="Skills">
+    <label class="form-label" asp-for="Skills">@T["Skills"] <span asp-validation-for="Skills"></span></label>
+    <input asp-for="Skills" class="form-control" />
+    <span class="hint">@T["Skills (separated by a comma)"]</span>
+</fieldset>

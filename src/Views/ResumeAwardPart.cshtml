@@ -1,0 +1,27 @@
+﻿@model ResumeAwardPartViewModel
+
+@{
+    var date = Model.StartDate is not null ? Model.StartDate.Value.ToString("MMM yyyy") : string.Empty;
+}
+
+<div class="item">
+    <div class="work-place row">
+        <div class="col-md-6">
+            <h3 class="place">@Model.AwardTitle</h3>
+        </div>
+        <div class="col-md-6">
+            <div class="location"><i class="fas fa-map-marker-alt mr-1"></i>@Model.IssuingOrganization - @Model.Location</div>
+        </div>
+    </div>
+    <div class="job-meta">
+        <div class="title">@Model.AwardIdOrName</div>
+        <div class="time">@date</div>
+    </div>
+    <div class="job-desc">
+        <p>
+            @Html.Raw(
+                     ((MarkupString)Regex.Replace(
+                     HttpUtility.HtmlEncode(Model.Description), "\r?\n|\r", "<br />")))
+        </p>
+    </div>
+</div>

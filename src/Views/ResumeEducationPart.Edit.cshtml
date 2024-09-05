@@ -1,0 +1,36 @@
+@model ResumeEducationPartViewModel
+
+<fieldset class="form-group" asp-validation-class-for="SchoolName">
+    <label class="form-label" asp-for="SchoolName">@T["SchoolName"] <span asp-validation-for="SchoolName"></span></label>
+    <input asp-for="SchoolName" class="form-control" />
+    <span class="hint">@T["School Name"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="Location">
+    <label class="form-label" asp-for="Location">@T["Location"] <span asp-validation-for="Location"></span></label>
+    <input asp-for="Location" class="form-control" />
+    <span class="hint">@T["School location"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="Degree">
+    <label class="form-label" asp-for="SchoolName">@T["Degree"] <span asp-validation-for="Degree"></span></label>
+    <input asp-for="Degree" class="form-control" />
+    <span class="hint">@T["Degree"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="StartDate">
+    <label class="form-label" asp-for="StartDate">@T["StartDate"] <span asp-validation-for="StartDate"></span></label>
+    <input asp-for="StartDate" type="date" class="form-control" />
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="EndDate">
+    <label class="form-label" asp-for="EndDate">@T["EndDate"] <span asp-validation-for="EndDate"></span></label>
+    <input asp-for="EndDate" type="date" class="form-control" />
+    <span class="hint">@T["Leave empty if it's your current school"]</span>
+</fieldset>
+
+<fieldset class="form-group" asp-validation-class-for="Description">
+    <label class="form-label" asp-for="Description">@T["Description"] <span asp-validation-for="Description"></span></label>
+    <textarea asp-for="Description" class="form-control" rows="10"></textarea>
+    <span class="hint">@T["Description"]</span>
+</fieldset>
