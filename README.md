@@ -3,7 +3,7 @@
 <img src="/logo.png" width="100" height="100" />
 
 ## Nuget
-[![NuGet latest version](https://badgen.net/nuget/v/OrchardCore.Modules.Resume/latest)](https://nuget.org/packages/OrchardCore.Modules.Resume)
+[![NuGet latest version](https://badgen.net/nuget/v/Ph.OrchardCore.Modules.Resume/latest)](https://nuget.org/packages/Ph.OrchardCore.Modules.Resume)
 [![.NET](https://github.com/phsoftware/OrchardCore.Modules.Resume/actions/workflows/build.yml/badge.svg)](https://github.com/phsoftware/OrchardCore.Modules.Resume/actions/workflows/build.yml)
 
 
