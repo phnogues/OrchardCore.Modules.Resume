@@ -4,7 +4,7 @@
 
 ## Nuget
 [![NuGet latest version](https://badgen.net/nuget/v/Ph.OrchardCore.Modules.Resume/latest)](https://nuget.org/packages/Ph.OrchardCore.Modules.Resume)
-[![.NET](https://github.com/phsoftware/OrchardCore.Modules.Resume/actions/workflows/build.yml/badge.svg)](https://github.com/phsoftware/OrchardCore.Modules.Resume/actions/workflows/build.yml)
+[![.NET](https://github.com/phnogues/OrchardCore.Modules.Resume/actions/workflows/build.yml/badge.svg)](https://github.com/phnogues/OrchardCore.Modules.Resume/actions/workflows/build.yml)
 
 
 ## Description
